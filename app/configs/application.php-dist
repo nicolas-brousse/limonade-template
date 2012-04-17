@@ -1,0 +1,16 @@
+<?php
+
+function app_configs()
+{
+    // App defaults configs
+    option('base_uri', '/');
+    option('encoding', 'utf-8');
+    option('session', 'my-app');
+    // option('default_locale', 'fr');
+}
+
+function app_before($route)
+{
+    // Default layout
+    layout(option('layouts_dir') . '/default.html.php');
+}
