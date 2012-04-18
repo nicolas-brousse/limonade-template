@@ -14,3 +14,8 @@ function app_before($route)
     // Default layout
     layout(option('layouts_dir') . '/default.html.php');
 }
+
+function app_after($output, $route)
+{
+  
+}

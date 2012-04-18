@@ -1,1 +1,2 @@
 hello: "Salut le monde"
+hello_x: "Salut %s"

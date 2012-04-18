@@ -18,3 +18,9 @@ function t($s=null)
         throw new Exception("i18n error! LANG:". option('current_locale') ." with key:'$s'");
     }
 }
+
+function is_current_page($page)
+{
+    $route = option('route');
+    return preg_match($route['pattern'], $page);
+}

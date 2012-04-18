@@ -27,7 +27,7 @@ function configure()
     option('public_dir', APPLICATION_PATH . '/../public');
     option('views_dir', APPLICATION_PATH . '/views');
     option('controllers_dir', APPLICATION_PATH . '/controllers');
-    option('layouts_dir', '../layouts');
+    option('layouts_dir', 'layouts');
     option('default_locale', 'en');
     option('current_locale', substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
     option('locale_messages', array());
@@ -54,4 +54,22 @@ function before($route)
         $locale_messages = Spyc::YAMLLoad($filename);
     }
     option('locale_messages', $locale_messages);
+    option('route', $route);
+}
+
+function after($output, $route)
+{
+    $app_after_output = app_after($output, $route);
+    if (!empty($app_after_output)) {
+        $output .= $app_after_output;
+    }
+
+    if (option('debug') === true) {
+        $time = number_format( (float)substr(microtime(), 0, 10) - LIM_START_MICROTIME, 6);
+        $output .= "\n<!-- page rendered in $time sec., on ".date(DATE_RFC822)." -->\n";
+        $output .= "<!-- for route\n";
+        $output .= print_r($route, true);
+        $output .= "-->";
+        return $output;
+    }
 }
