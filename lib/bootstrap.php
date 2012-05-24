@@ -16,7 +16,7 @@ require_once 'SplClassLoader.php';
 
 
 // Load application configs
-require_once_dir(APPLICATION_PATH . '/configs/');
+require_once_dir(APPLICATION_PATH . '/../config/');
 
 
 //Configuration de limonade
@@ -43,7 +43,9 @@ function configure()
 
 function before($route)
 {
-    app_before($route);
+    if (function_exists("app_before")) {
+        app_before($route);
+    }
 
     // Locales
     $locale_messages = array();
@@ -59,7 +61,9 @@ function before($route)
 
 function after($output, $route)
 {
-    $app_after_output = app_after($output, $route);
+    if (function_exists("app_after")) {
+        $app_after_output = app_after($output, $route);
+    }
     if (!empty($app_after_output)) {
         $output .= $app_after_output;
     }
