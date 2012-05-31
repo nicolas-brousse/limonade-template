@@ -5,6 +5,7 @@ require_once 'limonade.php';
 require_once 'helpers.php';
 require_once 'spyc.php';
 
+ini_set('display_errors', 1);
 ini_set('error_reporting', E_ALL);
 ini_set('error_log', APPLICATION_PATH.'/logs/'.APPLICATION_ENV.'.log');
 
