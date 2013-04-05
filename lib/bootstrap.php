@@ -1,19 +1,14 @@
 <?php
 
-// Include Limonade
-require_once 'limonade.php';
+use Symfony\Component\Yaml\Parser;
+
+// Load vendors
+require_once APPLICATION_PATH . '/../vendor/autoload.php';
 require_once 'helpers.php';
-require_once 'spyc.php';
 
 ini_set('display_errors', 1);
 ini_set('error_reporting', E_ALL);
 ini_set('error_log', APPLICATION_PATH.'/logs/'.APPLICATION_ENV.'.log');
-
-// Auto Include Libraries
-require_once 'SplClassLoader.php';
-
-// $classLoader = new SplClassLoader('Pest', APPLICATION_PATH . '/../vendors/pest/lib');
-// $classLoader->register();
 
 
 // Load application configs
@@ -49,12 +44,17 @@ function before($route)
     }
 
     // Locales
+    $yaml            = new Parser();
     $locale_messages = array();
-    $locale = option('current_locale') ? option('current_locale') : option('default_locale');
-    $filenames = glob(APPLICATION_PATH . '/locales/' . $locale . '/*.yml');
-    if(!is_array($filenames)) $filenames = array();
+    $locale          = option('current_locale') ? option('current_locale') : option('default_locale');
+    $filenames       = glob(APPLICATION_PATH . '/locales/' . $locale . '/*.yml');
+
+    if (! is_array($filenames)) {
+        $filenames = array();
+    }
+
     foreach($filenames as $filename) {
-        $locale_messages = Spyc::YAMLLoad($filename);
+        $locale_messages = $yaml->parse(file_get_contents($filename));
     }
     option('locale_messages', $locale_messages);
     option('route', $route);

@@ -1,0 +1,134 @@
+{
+    "hash": "08041ea20ce3eadcd900d760fdb7716d",
+    "packages": [
+        {
+            "name": "jquery/jquery",
+            "version": "1.9.1",
+            "dist": {
+                "type": "file",
+                "url": "http://code.jquery.com/jquery-1.9.1.js",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        },
+        {
+            "name": "sofadesign/limonade",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sofadesign/limonade.git",
+                "reference": "a6148ef07bd68c599dfe1523c9f33a1099033bbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sofadesign/limonade/zipball/a6148ef07bd68c599dfe1523c9f33a1099033bbb",
+                "reference": "a6148ef07bd68c599dfe1523c9f33a1099033bbb",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/limonade.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "a PHP micro-framework",
+            "homepage": "https://github.com/sofadesign/limonade",
+            "keywords": [
+                "microframework"
+            ],
+            "time": "2013-03-20 18:59:52"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.2.0",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "v2.2.0-RC3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.2.0-RC3",
+                "reference": "v2.2.0-RC3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-01-27 16:49:19"
+        },
+        {
+            "name": "twitter/bootstrap",
+            "version": "v2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twitter/bootstrap.git",
+                "reference": "v2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twitter/bootstrap/zipball/v2.3.1",
+                "reference": "v2.3.1",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "http://twitter.github.com/bootstrap/",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-03-01 05:24:27"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "sofadesign/limonade": 20
+    },
+    "platform": {
+        "php": " >=5.3"
+    },
+    "platform-dev": [
+
+    ]
+}

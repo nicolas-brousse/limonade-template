@@ -2,3 +2,6 @@ app/configs/*.php
 .htaccess
 .DS_Store
 logs/*
+
+composer.phar
+vendor/*

@@ -1,0 +1,32 @@
+{
+    "name": "opsone/limonade-template",
+    "description": "Opsone limonade template",
+
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery",
+                "version": "1.9.1",
+                "dist": {
+                    "url": "http://code.jquery.com/jquery-1.9.1.js",
+                    "type": "file"
+                }
+            }
+        }
+    ],
+
+    "require": {
+        "php"                : " >=5.3",
+        "sofadesign/limonade": "dev-master",
+
+        "symfony/yaml": "2.2.*",
+
+        "jquery/jquery"    : "1.9.*",
+        "twitter/bootstrap": "2.3.*"
+    }
+}
