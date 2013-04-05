@@ -4,7 +4,6 @@ use Symfony\Component\Yaml\Parser;
 
 // Load vendors
 require_once APPLICATION_PATH . '/../vendor/autoload.php';
-require_once 'helpers.php';
 
 ini_set('display_errors', 1);
 ini_set('error_reporting', E_ALL);
@@ -13,6 +12,7 @@ ini_set('error_log', APPLICATION_PATH.'/logs/'.APPLICATION_ENV.'.log');
 
 // Load application configs
 require_once_dir(APPLICATION_PATH . '/../config/');
+require_once_dir(APPLICATION_PATH . '/helpers/');
 
 
 //Configuration de limonade

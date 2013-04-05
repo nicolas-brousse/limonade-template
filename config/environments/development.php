@@ -7,7 +7,7 @@ function env_configs()
         option('base_uri', '/');
     }
     else {
-        option('base_uri', '/opsone/limonade-template/public/');
+        option('base_uri', '/my-project/path/');
     }
 
     option('encoding', 'utf-8');

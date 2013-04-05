@@ -15,6 +15,6 @@ defined('APPLICATION_ENV')
 // )));
 
 /** Zend_Application */
-require_once APPLICATION_PATH . '/../lib/bootstrap.php';
+require_once APPLICATION_PATH . '/bootstrap.php';
 
 run();
