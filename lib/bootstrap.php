@@ -75,6 +75,7 @@ function after($output, $route)
         $output .= "<!-- for route\n";
         $output .= print_r($route, true);
         $output .= "-->";
-        return $output;
     }
+    
+    return $output;
 }
