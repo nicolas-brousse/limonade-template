@@ -7,10 +7,16 @@ function env_configs()
         option('base_uri', '/');
     }
     else {
-        option('base_uri', '/my-project/path/');
+        option('base_uri', '/my-project/path/public/');//keep last /public
     }
 
     option('encoding', 'utf-8');
     option('session', 'app_fid');
     // option('default_locale', 'fr');
+
+    # DB
+    // option('db_dsn', 'mysql:host=my-hostname;dbname=my-dbname');
+    // option('db_user', '');
+    // option('db_pass', '');
+    
 }

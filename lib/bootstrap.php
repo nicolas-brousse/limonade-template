@@ -33,6 +33,7 @@ function configure()
     option('current_locale', substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
     option('locale_messages', array());
 
+    require_once_dir(APPLICATION_PATH . '/../app/models');
 
     if (option('env') == ENV_DEVELOPMENT) {
         option('debug', true);
