@@ -61,7 +61,7 @@
       APP_BASE_URI = '<?= url_for() ?>';
     // ]]>
     </script>
-    <script type="text/javascript" src="<?php echo url_for('/js/lib/jquery.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo url_for('/js/lib/jquery.js') ?>"></script>
     <script type="text/javascript" src="<?php echo url_for('/js/lib/bootstrap.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo url_for('/js/app.js') ?>"></script>
     <?php if(!empty($javascripts)): ?>
